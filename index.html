@@ -12,15 +12,29 @@
 
 <body>
 
-    <select name="chars" id="chars">
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-    </select>
+    <form>
+        <input type="checkbox" id="numero" name="numero" value="numero">
+        <label for="numero"> Deve ter número</label><br>
+        <input type="checkbox" id="maiuscula" name="maiuscula" value="maiuscula">
+        <label for="maiuscula"> Deve ter letra maiúscula</label><br>
+        <input type="checkbox" id="minuscula" name="minuscula" value="minuscula">
+        <label for="minuscula"> Deve ter letra minúscula</label><br>
+        <input type="checkbox" id="especiais" name="especiais" value="especiais">
+        <label for="especiais"> Deve ter caracteres especiais (!@#$%&*,.;:?><[]{}-_())</label>
+    <br>
+    <br>
+        <select name="chars" id="chars">
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select>
+    </form>
+    <br>
+    <br>
 
     <button id="btn">Clique</button>
 
