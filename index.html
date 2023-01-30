@@ -5,40 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>Gerador de Senhas</title>
 </head>
 
 <body>
 
-    <form>
-        <input type="checkbox" id="numero" name="numero" value="numero">
-        <label for="numero"> Deve ter número</label><br>
-        <input type="checkbox" id="maiuscula" name="maiuscula" value="maiuscula">
-        <label for="maiuscula"> Deve ter letra maiúscula</label><br>
-        <input type="checkbox" id="minuscula" name="minuscula" value="minuscula">
-        <label for="minuscula"> Deve ter letra minúscula</label><br>
-        <input type="checkbox" id="especiais" name="especiais" value="especiais">
-        <label for="especiais"> Deve ter caracteres especiais (!@#$%&*,.;:?><[]{}-_())</label>
-    <br>
-    <br>
-        <select name="chars" id="chars">
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-        </select>
-    </form>
-    <br>
-    <br>
+    <div class="content card">
+        <div class="titulo display-5">Gerador de Senhas</div>
+        <div class="content-form">
+            <form class="form-check">
+                <p class="form-check-label">Escolha os tipos de caracteres que sua senha deve possuir:</p>
+                <input class="form-check-input" type="checkbox" id="numero" name="numero" value="">
+                <label class="form-check-label" for="numero"> Deve ter número</label><br>
+                <input class="form-check-input" type="checkbox" id="maiuscula" name="maiuscula" value="maiuscula">
+                <label class="form-check-label" for="maiuscula"> Deve ter letra maiúscula</label><br>
+                <input class="form-check-input" type="checkbox" id="minuscula" name="minuscula" value="minuscula">
+                <label class="form-check-label" for="minuscula"> Deve ter letra minúscula</label><br>
+                <input class="form-check-input" type="checkbox" id="especiais" name="especiais" value="especiais">
+                <label class="form-check-label" for="especiais"> Deve ter caracteres especiais (!@#$%&*,.;:?><[]{}-_())</label>
+            </form>
 
-    <button id="btn">Clique</button>
+            <div class="content-status card">
+                <div class="status"></div>
+                <div class="status-text"></div>
+            </div>
+        </div>
 
-    <input type="text" name="senha" id="senha" value="">
+        <div class="content-pass">
+            <button id="btn" type="button" class="btn btn-info">Gerar</button>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="senha" id="senha" value=""
+                    aria-describedby="copy-to-clip">
+                <span class="input-group-text" id="copy-to-clip"><ion-icon name="clipboard-outline"></ion-icon></span>
+            </div>
+        </div>
+    </div>
 
     <script src="/assets/js/script.js"></script>
 </body>

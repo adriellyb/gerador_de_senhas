@@ -1,0 +1,82 @@
+body {
+    background-color: #f4f4f4 !important;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dosis', sans-serif;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    margin-inline: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 30px;
+}
+
+.titulo {
+    align-self: center;
+    padding: 25px 0;
+}
+
+.content-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-status.card {
+    width: 30vw;
+    text-align: center;
+    background: #ff3030;
+    color: #FFF;
+    border: none;
+
+    padding: 30px 0px;
+}
+
+.content-status.card .status {
+    font-size: 3rem;
+}
+
+.content-status.card .status-text {
+    font-size: 1.2rem;
+}
+
+.content-pass {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    margin: 30px 0;
+}
+
+.content-pass #btn {
+    margin: 30px;
+}
+
+@media (max-width: 900px) {
+    .content-form {
+        flex-direction: column;
+    }
+
+    .content-status.card {
+        width: 75%;
+
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 790px) {
+    .content-status.card {
+        width: 100%;
+    }
+
+    .content-pass {
+        width: 100%;
+    }
+}
